@@ -15,12 +15,18 @@ export class DensifytingService {
     constructor(){}
 
 
-    public initMaterial(material: string, materialGe: number): void {
-        this.material = material;
-        this.materialGe = materialGe;
-       
-        if (material) {
-            this.setGe();
+    public initMaterial(material?: string, materialGe?: number): void {
+
+        if (material !== undefined && material !== null){
+            this.material = material;
+
+            if (material) {
+                this.setGe();
+            }
+        }
+
+        if (materialGe !== undefined && materialGe !== null){
+            this.materialGe = materialGe;
         }
     }
 
