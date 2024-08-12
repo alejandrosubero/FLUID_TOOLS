@@ -16,9 +16,8 @@ export class Product {
     private isBaseMaterial: boolean;
 
     constructor();
-    constructor(name: string, specificGravity: number, packingWeight: number);
-    constructor(name: string, specificGravity: number, concentration: number, packingWeight: number, isDensifyingMaterial: boolean, isBaseMaterial: boolean);
-    constructor(name?: string, specificGravity?: number, concentration?: number, packingWeight?: number, isDensifyingMaterial?: boolean, isBaseMaterial?: boolean) {
+   
+    constructor(name?: string, specificGravity?: number, concentration?: number, packingWeight?: number, isDensifyingMaterial?: boolean, isBaseMaterial?: boolean) {   
         this.productId = 0;
         this.well = '';
         this.name = name || '';
@@ -125,7 +124,7 @@ export class Product {
         this.isDensifyingMaterial = densifyingMaterial;
     }
 
-    gettIsBaseMaterial(): boolean {
+    getIsBaseMaterial(): boolean {
         return this.isBaseMaterial;
     }
 

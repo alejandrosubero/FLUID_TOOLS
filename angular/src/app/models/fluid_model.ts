@@ -2,14 +2,17 @@ import { FluidPropertiesModel } from "./fluid_properties_model";
 
 
 export class Fluid {
+
     private volume: number;
-    private fluidProperties: FluidPropertiesModel[] = [];
-    private selectFluidProperties: FluidPropertiesModel | null = null;
+    private fluidProperties: Array<FluidPropertiesModel> = new Array<FluidPropertiesModel>();
+    private selectFluidProperties: FluidPropertiesModel = new FluidPropertiesModel();
 
     constructor() {
         this.volume = 0;
     }
 
+
+    
     getActiveFluidProperties(): FluidPropertiesModel | null {
         this.fluidProperties.forEach(fluidPropertiesModel => {
             if (fluidPropertiesModel.getActiveFluid()) {

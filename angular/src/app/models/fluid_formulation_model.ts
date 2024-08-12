@@ -2,6 +2,7 @@ import { Product } from "./product_model";
 
 
 export class FluidFormulation {
+    
     private volumenBaseFluid: number;
     private volumenFluidWithoutDensifying: number;
     private volumenOfAdditives: number;
@@ -9,7 +10,7 @@ export class FluidFormulation {
     private sxsDensifying: number;
     private totalVolumen: number;
     private fluidDensity: number;
-    private products: Product[];
+    private products: Array<Product>;
 
     constructor() {
         this.volumenBaseFluid = 0;
@@ -19,7 +20,7 @@ export class FluidFormulation {
         this.sxsDensifying = 0;
         this.totalVolumen = 0;
         this.fluidDensity = 0;
-        this.products = [];
+        this.products = new Array<Product>();
     }
 
     getVolumenBaseFluid(): number {
@@ -58,7 +59,7 @@ export class FluidFormulation {
         return this.products;
     }
 
-    setProducts(products: Product[]): void {
+    setProducts(products: Array<Product>): void {
         this.products = products;
     }
 

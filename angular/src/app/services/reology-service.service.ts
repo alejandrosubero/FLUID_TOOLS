@@ -7,7 +7,7 @@ import { FluidPropertiesModel } from '../models/fluid_properties_model';
 export class ReologyService {
 
  
-  private  reologyParameter: FluidPropertiesModel = new FluidPropertiesModel();
+  private reologyParameter: FluidPropertiesModel = new FluidPropertiesModel();
 
   
  constructor() { }
