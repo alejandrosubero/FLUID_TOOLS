@@ -7,8 +7,8 @@ import { SystemConstant } from '../models/system_constant_model';
 })
 export class DensifytingService {
 
-    private material?: string;
-    private materialGe?: number;
+    private material: string = "";
+    private materialGe: number = 0;
     private fluidFormulationService: FluidFormulationService = inject(FluidFormulationService);
 
     
@@ -45,19 +45,19 @@ export class DensifytingService {
         }
     }
 
-    getPoundForGalon(): number | undefined {
-        return this.materialGe !== undefined ? this.fluidFormulationService.getPoundForGalon(this.materialGe) : undefined;
+    getPoundForGalon(): number  {
+        return this.materialGe !== undefined ? this.fluidFormulationService.getPoundForGalon(this.materialGe) : 0;
     }
 
-    getPoundForBarrel(): number | undefined {
-        return this.materialGe !== undefined ? this.fluidFormulationService.getPoundForBarrel(this.materialGe) : undefined;
+    getPoundForBarrel(): number  {
+        return this.materialGe !== undefined ? this.fluidFormulationService.getPoundForBarrel(this.materialGe) : 0;
     }
 
-    getBagsInBarrel(bagPounds: number): number | undefined {
-        return this.materialGe !== undefined ? this.fluidFormulationService.getBagsInBarrel(bagPounds, this.materialGe) : undefined;
+    getBagsInBarrel(bagPounds: number): number  {
+        return this.materialGe !== undefined ? this.fluidFormulationService.getBagsInBarrel(bagPounds, this.materialGe) : 0;
     }
 
-    getMaterial(): string | undefined {
+    getMaterial(): string  {
         return this.material;
     }
 
@@ -66,7 +66,7 @@ export class DensifytingService {
         this.setGe();
     }
 
-    getMaterialGe(): number | undefined {
+    getMaterialGe(): number  {
         return this.materialGe;
     }
 
